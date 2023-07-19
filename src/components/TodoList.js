@@ -1,13 +1,14 @@
 import { ListGroup } from 'react-bootstrap';
+import Todo from '../components/Todo'
 
-export default function TodoList() {
+export default function TodoList({ todos }) {
     return (
         <ListGroup className="mt-4">
-            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            {
+                todos.map(todo => 
+                    <ListGroup.Item><Todo todo={ todo } /></ListGroup.Item>
+                )
+            }
         </ListGroup>
     )
 }
