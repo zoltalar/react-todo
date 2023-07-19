@@ -42,7 +42,7 @@ function App() {
       'Learn Symfony',
       'Write better code'
     ]
-    let todos = names
+    const todos = names
       .map(name => ({ id: uuidv4(), name, completed: false, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .slice(0, 5)
