@@ -1,4 +1,5 @@
 import { Button, Form, InputGroup } from 'react-bootstrap';
+import TodoList from '../components/TodoList';
 
 export default function Todos() {
     return (
@@ -11,7 +12,11 @@ export default function Todos() {
                 <Button variant="secondary">
                     Clear Completed
                 </Button>
-            </InputGroup>
+            </InputGroup>            
+            <TodoList />
+            <Form.Text className="d-block mt-4" muted>
+                You have 0 todos left.
+            </Form.Text>
         </>
     )
 }
