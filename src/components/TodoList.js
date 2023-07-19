@@ -11,7 +11,9 @@ export default function TodoList({ todos, toggleTodo }) {
         todos.length > 0 && <ListGroup className="mt-4">
             {
                 todos.map(todo => 
-                    <ListGroup.Item key={ todo.id } variant={ variant(todo) }><Todo todo={ todo } toggleTodo={ toggleTodo } /></ListGroup.Item>
+                    <ListGroup.Item key={ todo.id } variant={ variant(todo) }>
+                        <Todo todo={ todo } toggleTodo={ toggleTodo } />
+                    </ListGroup.Item>
                 )
             }
         </ListGroup>
